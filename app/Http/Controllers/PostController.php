@@ -17,6 +17,7 @@ class PostController extends Controller
         $perPage = request('per_page', 10);
         $posts = Post::paginate($perPage);
         return response()->json([
+            
             'message' => 'Posts retrieved successfully',
             'posts' => $posts,
         ]);
